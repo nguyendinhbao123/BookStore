@@ -1,0 +1,69 @@
+﻿
+<link href="~/Content/templatemo_style.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Dangky";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<table align="center">
+<h2 style="text-align:center">ĐĂNG KÝ THÀNH VIÊN</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+            <tr style="height:40px">
+                <td>HỌ TÊN KHÁCH HÀNG:</td>
+                <td>
+                    @Html.TextBox("HoTenKH")
+                @ViewData["Loi1"]
+            </td>
+            </tr>
+            <tr style="height:40px">
+                <td>TÊN ĐĂNG NHẬP:</td>
+                <td>
+                    @Html.TextBox("TenDN")
+                    @ViewData["Loi2"]
+                </td>
+            </tr>
+            <tr style="height:40px">
+                <td>MẬT KHẨU:</td>
+                <td>
+                    @Html.TextBox("Matkhau")
+                    @ViewData["Loi3"]
+                </td>
+            </tr>
+            <tr style="height:40px">
+                <td>NHẬP LẠI MẬT KHẨU:</td>
+                <td>
+                    @Html.TextBox("Matkhaunhaplai")
+                    @ViewData["Loi4"]
+                </td>
+            </tr>
+             <tr style="height:40px">
+                <td>EMAIL:</td>
+                <td>
+                    @Html.TextBox("Email")
+                    @ViewData["Loi5"]
+                </td>
+            </tr>
+            <tr style="height:40px">
+                <td>ĐIỆN THOẠI:</td>
+                <td>
+                    @Html.TextBox("DienthoaiKH")
+                    @ViewData["Loi6"]
+                </td>
+            </tr>
+            <tr style="height:40px">
+                <td>NGÀY SINH:</td>
+                <td>
+                    <input type="date"name="Ngaysinh"/>
+                </td>
+            </tr>
+            <tr style="height:40px">
+                <td></td>
+                <td>
+                   <input type="submit"value="Đăng ký"/>
+                </td>
+            </tr>
+    }
+    </table>
+
